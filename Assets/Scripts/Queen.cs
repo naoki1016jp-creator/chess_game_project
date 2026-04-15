@@ -6,6 +6,11 @@ public class Queen : Piece
     private void Awake()
     {
         pieceType = PieceType.Queen;
+
+        maxHP = 16;
+        currentHP = 16;
+        attackPower = 6;
+        defensePower = 2;
     }
 
     public override List<Move> GetMoves(Piece[,] board)
@@ -33,8 +38,6 @@ public class Queen : Piece
                 }
                 else
                 {
-                    if (Enemy(board, x, y))
-                        moves.Add(new Move(boardPosition, new Vector2Int(x, y)));
                     break;
                 }
 
@@ -44,5 +47,31 @@ public class Queen : Piece
         }
 
         return moves;
+    }
+
+    public override List<Vector2Int> GetAttackSquares(Piece[,] board)
+    {
+        Vector2Int[] dirs =
+        {
+            new Vector2Int(1, 0), new Vector2Int(-1, 0),
+            new Vector2Int(0, 1), new Vector2Int(0, -1),
+            new Vector2Int(1, 1), new Vector2Int(1, -1),
+            new Vector2Int(-1, 1), new Vector2Int(-1, -1)
+        };
+
+        return GetRayAttackSquares(board, dirs);
+    }
+
+    public override List<Vector2Int> GetSupportSquares(Piece[,] board)
+    {
+        Vector2Int[] dirs =
+        {
+            new Vector2Int(1, 0), new Vector2Int(-1, 0),
+            new Vector2Int(0, 1), new Vector2Int(0, -1),
+            new Vector2Int(1, 1), new Vector2Int(1, -1),
+            new Vector2Int(-1, 1), new Vector2Int(-1, -1)
+        };
+
+        return GetRaySupportSquares(board, dirs);
     }
 }

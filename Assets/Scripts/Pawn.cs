@@ -6,6 +6,11 @@ public class Pawn : Piece
     private void Awake()
     {
         pieceType = PieceType.Pawn;
+
+        maxHP = 8;
+        currentHP = 8;
+        attackPower = 2;
+        defensePower = 1;
     }
 
     public override List<Move> GetMoves(Piece[,] board)
@@ -19,44 +24,43 @@ public class Pawn : Piece
         int x = boardPosition.x;
         int y = boardPosition.y;
 
-        // 前に1マス
         if (Inside(x, y + dir) && Empty(board, x, y + dir))
         {
             Move move = new Move(boardPosition, new Vector2Int(x, y + dir));
 
             if (y + dir == promotionRow)
-            {
                 move.isPromotion = true;
-            }
 
             moves.Add(move);
 
-            // 初手2マス
             if (!hasMoved && y == startRow && Inside(x, y + dir * 2) && Empty(board, x, y + dir * 2))
             {
                 moves.Add(new Move(boardPosition, new Vector2Int(x, y + dir * 2)));
             }
         }
 
-        // 斜め取り
-        foreach (int dx in new int[] { -1, 1 })
-        {
-            int nx = x + dx;
-            int ny = y + dir;
-
-            if (Inside(nx, ny) && Enemy(board, nx, ny))
-            {
-                Move move = new Move(boardPosition, new Vector2Int(nx, ny));
-
-                if (ny == promotionRow)
-                {
-                    move.isPromotion = true;
-                }
-
-                moves.Add(move);
-            }
-        }
-
         return moves;
+    }
+
+    public override List<Vector2Int> GetAttackSquares(Piece[,] board)
+    {
+        List<Vector2Int> result = new List<Vector2Int>();
+
+        int dir = (color == PieceColor.White) ? 1 : -1;
+        int x = boardPosition.x;
+        int y = boardPosition.y;
+
+        if (Inside(x - 1, y + dir))
+            result.Add(new Vector2Int(x - 1, y + dir));
+
+        if (Inside(x + 1, y + dir))
+            result.Add(new Vector2Int(x + 1, y + dir));
+
+        return result;
+    }
+
+    public override List<Vector2Int> GetSupportSquares(Piece[,] board)
+    {
+        return GetAttackSquares(board);
     }
 }

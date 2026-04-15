@@ -19,7 +19,13 @@ public class ChessInput : MonoBehaviour
     {
         if (gameManager == null) return;
 
-        // 昇格待ち中はキー入力のみ受け付ける
+        // ゲーム終了中は入力しない
+        if (gameManager.isGameOver) return;
+
+        // ターン解決中は入力しない
+        if (gameManager.isResolvingTurn) return;
+
+        // 昇格待ち中はキー入力のみ
         if (gameManager.boardManager != null && gameManager.boardManager.IsPromotionPending)
         {
             HandlePromotionInput();
@@ -35,35 +41,18 @@ public class ChessInput : MonoBehaviour
     private void HandlePromotionInput()
     {
         if (Input.GetKeyDown(KeyCode.Q))
-        {
             gameManager.ConfirmPromotion(PieceType.Queen);
-        }
         else if (Input.GetKeyDown(KeyCode.R))
-        {
             gameManager.ConfirmPromotion(PieceType.Rook);
-        }
         else if (Input.GetKeyDown(KeyCode.B))
-        {
             gameManager.ConfirmPromotion(PieceType.Bishop);
-        }
         else if (Input.GetKeyDown(KeyCode.N))
-        {
             gameManager.ConfirmPromotion(PieceType.Knight);
-        }
     }
 
     private void HandleClick()
     {
-        if (gameManager != null && gameManager.isGameOver)
-        {
-            return;
-        }
-
-        if (targetCamera == null)
-        {
-            Debug.LogWarning("Camera が設定されていません");
-            return;
-        }
+        if (targetCamera == null) return;
 
         Ray ray = targetCamera.ScreenPointToRay(Input.mousePosition);
 
@@ -93,6 +82,7 @@ public class ChessInput : MonoBehaviour
 
     private void HandlePieceClick(Piece clickedPiece)
     {
+        // まだ何も選択していない
         if (selectedPiece == null)
         {
             if (clickedPiece.color == gameManager.currentTurn)
@@ -102,28 +92,22 @@ public class ChessInput : MonoBehaviour
             return;
         }
 
+        // 同じ駒を再クリックで選択解除
         if (clickedPiece == selectedPiece)
         {
             DeselectPiece();
             return;
         }
 
+        // 味方駒なら選び直し
         if (clickedPiece.color == gameManager.currentTurn)
         {
             SelectPiece(clickedPiece);
             return;
         }
 
-        bool moved = gameManager.TryMove(selectedPiece.boardPosition, clickedPiece.boardPosition);
-
-        if (moved)
-        {
-            selectedPiece = null;
-        }
-        else
-        {
-            Debug.Log("その駒は取れません");
-        }
+        // 敵駒を直接クリックしても手動攻撃しない
+        Debug.Log("攻撃はターン終了時に自動で処理されます");
     }
 
     private void HandleSquareClick(ChessSquare clickedSquare)
@@ -146,7 +130,7 @@ public class ChessInput : MonoBehaviour
     private void SelectPiece(Piece piece)
     {
         selectedPiece = piece;
-        Debug.Log($"選択: {piece.name} ({piece.boardPosition.x}, {piece.boardPosition.y})");
+        Debug.Log($"選択: {piece.name} / HP {piece.currentHP}/{piece.maxHP}");
     }
 
     private void DeselectPiece()

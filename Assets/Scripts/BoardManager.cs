@@ -15,8 +15,16 @@ public class BoardManager : MonoBehaviour
     public GameObject whiteKnightPromotionPrefab;
     public GameObject blackKnightPromotionPrefab;
 
+    [Header("Combat Settings")]
+    public int minimumDamage = 1;
+    public int supportReduction = 1;
+
     private Dictionary<Vector2Int, ChessSquare> squaresByPos = new Dictionary<Vector2Int, ChessSquare>();
     private Dictionary<string, ChessSquare> squaresByName = new Dictionary<string, ChessSquare>();
+
+    // 支援マップ
+    private Dictionary<Vector2Int, int> whiteSupportMap = new Dictionary<Vector2Int, int>();
+    private Dictionary<Vector2Int, int> blackSupportMap = new Dictionary<Vector2Int, int>();
 
     // 昇格待ち
     public bool IsPromotionPending => isPromotionPending;
@@ -46,8 +54,6 @@ public class BoardManager : MonoBehaviour
         ChessSquare[] squares = FindObjectsOfType<ChessSquare>(true);
 #endif
 
-        Debug.Log($"見つかった ChessSquare 数: {squares.Length}");
-
         foreach (ChessSquare square in squares)
         {
             if (!squaresByPos.ContainsKey(square.boardPosition))
@@ -57,8 +63,6 @@ public class BoardManager : MonoBehaviour
             if (!squaresByName.ContainsKey(key))
                 squaresByName.Add(key, square);
         }
-
-        Debug.Log($"マス登録完了: {squaresByPos.Count} マス");
     }
 
     private void RegisterScenePieces()
@@ -70,31 +74,14 @@ public class BoardManager : MonoBehaviour
         foreach (Piece piece in pieces)
         {
             ChessSquare nearest = GetNearestSquare(piece.transform.position);
-
-            if (nearest == null)
-            {
-                Debug.LogWarning($"{piece.name} の近くにマスが見つかりません");
-                continue;
-            }
+            if (nearest == null) continue;
 
             Vector2Int pos = nearest.boardPosition;
-
-            if (!Inside(pos))
-            {
-                Debug.LogWarning($"{piece.name} は盤面外です: {pos}");
-                continue;
-            }
-
-            if (board[pos.x, pos.y] != null)
-            {
-                Debug.LogWarning($"同じマスに複数の駒があります: {pos}");
-                continue;
-            }
+            if (!Inside(pos)) continue;
+            if (board[pos.x, pos.y] != null) continue;
 
             piece.boardPosition = pos;
             board[pos.x, pos.y] = piece;
-
-            Debug.Log($"{piece.name} -> {nearest.squareName} ({pos.x}, {pos.y})");
         }
     }
 
@@ -122,6 +109,9 @@ public class BoardManager : MonoBehaviour
         return nearest;
     }
 
+    // =========================
+    // 移動処理
+    // =========================
     public bool MovePiece(Move move)
     {
         if (isPromotionPending)
@@ -152,12 +142,6 @@ public class BoardManager : MonoBehaviour
         if (matchedMove == null)
             return false;
 
-        Piece target = board[move.to.x, move.to.y];
-        if (target != null)
-        {
-            Destroy(target.gameObject);
-        }
-
         board[move.from.x, move.from.y] = null;
         board[move.to.x, move.to.y] = piece;
 
@@ -166,13 +150,13 @@ public class BoardManager : MonoBehaviour
 
         MovePieceToSquare(piece, move.to);
 
-        // キャスリング処理
+        // キャスリング
         if (matchedMove.isCastling)
         {
             HandleCastling(matchedMove);
         }
 
-        // 昇格待ちへ
+        // 昇格待ち開始
         if (matchedMove.isPromotion && piece is Pawn pawn)
         {
             StartPromotion(pawn);
@@ -212,6 +196,9 @@ public class BoardManager : MonoBehaviour
         piece.transform.position = new Vector3(target.x, current.y, target.z);
     }
 
+    // =========================
+    // 昇格処理
+    // =========================
     private void StartPromotion(Pawn pawn)
     {
         isPromotionPending = true;
@@ -299,6 +286,119 @@ public class BoardManager : MonoBehaviour
         }
 
         return null;
+    }
+
+    // =========================
+    // 支援フェーズ
+    // =========================
+    public void ResolveSupportPhase()
+    {
+        whiteSupportMap.Clear();
+        blackSupportMap.Clear();
+
+        for (int x = 0; x < 8; x++)
+        {
+            for (int y = 0; y < 8; y++)
+            {
+                Piece piece = board[x, y];
+                if (piece == null) continue;
+
+                foreach (Vector2Int pos in piece.GetSupportSquares(board))
+                {
+                    if (!Inside(pos)) continue;
+
+                    Piece target = board[pos.x, pos.y];
+                    if (target == null) continue;
+                    if (target.color != piece.color) continue;
+                    if (target.boardPosition == piece.boardPosition) continue;
+
+                    var map = piece.color == PieceColor.White ? whiteSupportMap : blackSupportMap;
+
+                    if (!map.ContainsKey(pos))
+                        map[pos] = 0;
+
+                    map[pos]++;
+                }
+            }
+        }
+    }
+
+    public int GetSupportCount(Vector2Int pos, PieceColor color)
+    {
+        var map = color == PieceColor.White ? whiteSupportMap : blackSupportMap;
+        return map.ContainsKey(pos) ? map[pos] : 0;
+    }
+
+    // =========================
+    // 攻撃フェーズ
+    // 攻撃範囲内の敵「全員」を攻撃
+    // =========================
+    public void ResolveAttackPhase(PieceColor attackingColor, GameManager gameManager)
+    {
+        List<Piece> attackers = new List<Piece>();
+
+        for (int y = 0; y < 8; y++)
+        {
+            for (int x = 0; x < 8; x++)
+            {
+                Piece p = board[x, y];
+                if (p != null && p.color == attackingColor)
+                    attackers.Add(p);
+            }
+        }
+
+        foreach (Piece attacker in attackers)
+        {
+            if (attacker == null) continue;
+            if (!Inside(attacker.boardPosition)) continue;
+            if (board[attacker.boardPosition.x, attacker.boardPosition.y] != attacker) continue;
+
+            foreach (Piece target in GetAllAttackTargets(attacker))
+            {
+                if (target == null) continue;
+                if (!Inside(target.boardPosition)) continue;
+                if (board[target.boardPosition.x, target.boardPosition.y] != target) continue;
+
+                bool wasKing = target.pieceType == PieceType.King;
+
+                int support = GetSupportCount(target.boardPosition, target.color);
+                int damage = attacker.attackPower - target.defensePower - (support * supportReduction);
+                if (damage < minimumDamage) damage = minimumDamage;
+
+                target.TakeDamage(damage);
+
+                if (target.IsDead())
+                {
+                    Vector2Int pos = target.boardPosition;
+                    Destroy(target.gameObject);
+                    board[pos.x, pos.y] = null;
+
+                    if (wasKing)
+                    {
+                        gameManager.EndGame(attackingColor);
+                        return;
+                    }
+                }
+            }
+        }
+    }
+
+    private List<Piece> GetAllAttackTargets(Piece attacker)
+    {
+        HashSet<Piece> result = new HashSet<Piece>();
+
+        foreach (Vector2Int pos in attacker.GetAttackSquares(board))
+        {
+            if (!Inside(pos)) continue;
+
+            Piece target = board[pos.x, pos.y];
+            if (target == null) continue;
+            if (target.color == attacker.color) continue;
+
+            result.Add(target);
+        }
+
+        return new List<Piece>(result);
     }
 
     public ChessSquare GetSquare(string squareName)

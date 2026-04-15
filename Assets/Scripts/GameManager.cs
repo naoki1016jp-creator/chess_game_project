@@ -9,59 +9,38 @@ public class GameManager : MonoBehaviour
     public PieceColor winner;
 
     public bool stopTimeOnGameOver = true;
+    public bool isResolvingTurn = false;
 
+    // =========================
+    // 移動だけ行う
+    // =========================
     public bool TryMove(Vector2Int from, Vector2Int to)
     {
-        if (isGameOver)
-        {
-            Debug.Log("ゲームはすでに終了しています");
-            return false;
-        }
-
-        if (boardManager.IsPromotionPending)
-        {
-            Debug.Log("昇格待ち中です。Q/R/B/N を押してください。");
-            return false;
-        }
+        if (isGameOver) return false;
+        if (isResolvingTurn) return false;
+        if (boardManager.IsPromotionPending) return false;
 
         Piece piece = boardManager.board[from.x, from.y];
-        if (piece == null)
-            return false;
-
-        if (piece.color != currentTurn)
-            return false;
-
-        Piece target = boardManager.board[to.x, to.y];
-
-        bool kingWillBeCaptured = false;
-        if (target != null &&
-            target.color != piece.color &&
-            target.pieceType == PieceType.King)
-        {
-            kingWillBeCaptured = true;
-        }
+        if (piece == null) return false;
+        if (piece.color != currentTurn) return false;
 
         bool moved = boardManager.MovePiece(new Move(from, to));
 
         if (moved)
         {
-            if (kingWillBeCaptured)
+            // 昇格待ちでなければ即ターン解決
+            if (!boardManager.IsPromotionPending)
             {
-                EndGame(currentTurn);
-            }
-            else
-            {
-                // 昇格待ちでなければ手番交代
-                if (!boardManager.IsPromotionPending)
-                {
-                    EndTurn();
-                }
+                ResolveTurn();
             }
         }
 
         return moved;
     }
 
+    // =========================
+    // 昇格確定後にターン解決
+    // =========================
     public void ConfirmPromotion(PieceType promotionType)
     {
         if (isGameOver) return;
@@ -70,16 +49,54 @@ public class GameManager : MonoBehaviour
         bool success = boardManager.CompletePromotion(promotionType);
         if (success)
         {
-            EndTurn();
+            ResolveTurn();
         }
     }
 
+    // =========================
+    // ターン解決
+    // =========================
+    private void ResolveTurn()
+    {
+        if (isGameOver) return;
+
+        isResolvingTurn = true;
+
+        // 1. 支援フェーズ
+        boardManager.ResolveSupportPhase();
+
+        if (isGameOver)
+        {
+            isResolvingTurn = false;
+            return;
+        }
+
+        // 2. 攻撃フェーズ（全員攻撃）
+        boardManager.ResolveAttackPhase(currentTurn, this);
+
+        if (!isGameOver)
+        {
+            EndTurn();
+        }
+
+        isResolvingTurn = false;
+    }
+
+    // =========================
+    // 手番交代
+    // =========================
     public void EndTurn()
     {
-        currentTurn = (currentTurn == PieceColor.White) ? PieceColor.Black : PieceColor.White;
+        currentTurn = (currentTurn == PieceColor.White)
+            ? PieceColor.Black
+            : PieceColor.White;
+
         Debug.Log($"手番交代: {currentTurn}");
     }
 
+    // =========================
+    // ゲーム終了
+    // =========================
     public void EndGame(PieceColor winningColor)
     {
         isGameOver = true;
@@ -99,5 +116,6 @@ public class GameManager : MonoBehaviour
         winner = PieceColor.White;
         currentTurn = PieceColor.White;
         Time.timeScale = 1f;
+        isResolvingTurn = false;
     }
 }
