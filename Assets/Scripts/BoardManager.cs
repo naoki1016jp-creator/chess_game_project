@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class BoardManager : MonoBehaviour
 {
+    public static Move LastMove { get; private set; }
+
     public Piece[,] board = new Piece[8, 8];
 
-    [Header("昇格用 Prefab")]
+    [Header("Promotion Prefabs")]
     public GameObject whiteQueenPromotionPrefab;
     public GameObject blackQueenPromotionPrefab;
     public GameObject whiteRookPromotionPrefab;
@@ -15,19 +17,17 @@ public class BoardManager : MonoBehaviour
     public GameObject whiteKnightPromotionPrefab;
     public GameObject blackKnightPromotionPrefab;
 
-    private Dictionary<Vector2Int, ChessSquare> squaresByPos = new Dictionary<Vector2Int, ChessSquare>();
-    private Dictionary<string, ChessSquare> squaresByName = new Dictionary<string, ChessSquare>();
-
-    // 昇格待ち
     public bool IsPromotionPending => isPromotionPending;
+    private bool isPromotionPending;
 
-    private bool isPromotionPending = false;
-    private Vector2Int pendingPromotionPos;
-    private PieceColor pendingPromotionColor;
-    private GameObject pendingPawnObject;
-    private Transform pendingPawnParent;
-    private Quaternion pendingPawnRotation;
-    private Vector3 pendingPawnPosition;
+    private Vector2Int promotionPos;
+    private PieceColor promotionColor;
+    private GameObject pawnObj;
+    private Transform pawnParent;
+    private Quaternion pawnRot;
+    private Vector3 pawnPos;
+
+    private Dictionary<Vector2Int, ChessSquare> squaresByPos = new Dictionary<Vector2Int, ChessSquare>();
 
     private void Start()
     {
@@ -38,7 +38,6 @@ public class BoardManager : MonoBehaviour
     private void RegisterSquares()
     {
         squaresByPos.Clear();
-        squaresByName.Clear();
 
 #if UNITY_2023_1_OR_NEWER
         ChessSquare[] squares = FindObjectsByType<ChessSquare>(FindObjectsInactive.Include, FindObjectsSortMode.None);
@@ -46,55 +45,35 @@ public class BoardManager : MonoBehaviour
         ChessSquare[] squares = FindObjectsOfType<ChessSquare>(true);
 #endif
 
-        Debug.Log($"見つかった ChessSquare 数: {squares.Length}");
-
         foreach (ChessSquare square in squares)
         {
             if (!squaresByPos.ContainsKey(square.boardPosition))
                 squaresByPos.Add(square.boardPosition, square);
-
-            string key = square.squareName.ToLower();
-            if (!squaresByName.ContainsKey(key))
-                squaresByName.Add(key, square);
         }
 
-        Debug.Log($"マス登録完了: {squaresByPos.Count} マス");
+        Debug.Log($"[BoardManager] {squaresByPos.Count} マス登録完了");
     }
 
     private void RegisterScenePieces()
     {
         board = new Piece[8, 8];
 
-        Piece[] pieces = GetComponentsInChildren<Piece>(true);
+        Piece[] pieces = FindObjectsByType<Piece>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 
         foreach (Piece piece in pieces)
         {
             ChessSquare nearest = GetNearestSquare(piece.transform.position);
-
-            if (nearest == null)
-            {
-                Debug.LogWarning($"{piece.name} の近くにマスが見つかりません");
-                continue;
-            }
+            if (nearest == null) continue;
 
             Vector2Int pos = nearest.boardPosition;
 
-            if (!Inside(pos))
-            {
-                Debug.LogWarning($"{piece.name} は盤面外です: {pos}");
-                continue;
-            }
-
-            if (board[pos.x, pos.y] != null)
-            {
-                Debug.LogWarning($"同じマスに複数の駒があります: {pos}");
-                continue;
-            }
+            if (pos.x < 0 || pos.x >= 8 || pos.y < 0 || pos.y >= 8) continue;
+            if (board[pos.x, pos.y] != null) continue;
 
             piece.boardPosition = pos;
             board[pos.x, pos.y] = piece;
 
-            Debug.Log($"{piece.name} -> {nearest.squareName} ({pos.x}, {pos.y})");
+            Debug.Log($"[BoardManager] {piece.name} -> {nearest.squareName} ({pos.x},{pos.y})");
         }
     }
 
@@ -106,10 +85,8 @@ public class BoardManager : MonoBehaviour
         foreach (var pair in squaresByPos)
         {
             ChessSquare square = pair.Value;
-
-            Vector2 pieceXZ = new Vector2(worldPos.x, worldPos.z);
+            Vector2 pieceXZ  = new Vector2(worldPos.x, worldPos.z);
             Vector2 squareXZ = new Vector2(square.transform.position.x, square.transform.position.z);
-
             float dist = Vector2.Distance(pieceXZ, squareXZ);
 
             if (dist < minDist)
@@ -124,39 +101,25 @@ public class BoardManager : MonoBehaviour
 
     public bool MovePiece(Move move)
     {
-        if (isPromotionPending)
-        {
-            Debug.Log("昇格待ち中なので移動できません");
-            return false;
-        }
-
-        if (!Inside(move.from) || !Inside(move.to))
-            return false;
-
         Piece piece = board[move.from.x, move.from.y];
-        if (piece == null)
-            return false;
+        if (piece == null) return false;
 
-        List<Move> legalMoves = piece.GetMoves(board);
-        Move matchedMove = null;
+        Move matched = null;
+        foreach (var m in piece.GetMoves(board))
+            if (m.to == move.to) matched = m;
 
-        foreach (Move m in legalMoves)
+        if (matched == null) return false;
+
+        if (matched.isEnPassant)
         {
-            if (m.to == move.to)
-            {
-                matchedMove = m;
-                break;
-            }
+            var p = matched.enPassantCapturedPos;
+            Destroy(board[p.x, p.y].gameObject);
+            board[p.x, p.y] = null;
         }
-
-        if (matchedMove == null)
-            return false;
 
         Piece target = board[move.to.x, move.to.y];
         if (target != null)
-        {
             Destroy(target.gameObject);
-        }
 
         board[move.from.x, move.from.y] = null;
         board[move.to.x, move.to.y] = piece;
@@ -166,18 +129,13 @@ public class BoardManager : MonoBehaviour
 
         MovePieceToSquare(piece, move.to);
 
-        // キャスリング処理
-        if (matchedMove.isCastling)
-        {
-            HandleCastling(matchedMove);
-        }
+        if (matched.isCastling)
+            HandleCastling(matched);
 
-        // 昇格待ちへ
-        if (matchedMove.isPromotion && piece is Pawn pawn)
-        {
+        if (matched.isPromotion && piece is Pawn pawn)
             StartPromotion(pawn);
-        }
 
+        LastMove = matched;
         return true;
     }
 
@@ -193,126 +151,51 @@ public class BoardManager : MonoBehaviour
         rook.hasMoved = true;
 
         MovePieceToSquare(rook, castleMove.rookTo);
-
-        Debug.Log("キャスリングしました");
     }
 
     private void MovePieceToSquare(Piece piece, Vector2Int pos)
     {
-        if (!squaresByPos.ContainsKey(pos))
-        {
-            Debug.LogWarning($"移動先マスが見つかりません: {pos}");
-            return;
-        }
+        if (!squaresByPos.ContainsKey(pos)) return;
 
         ChessSquare square = squaresByPos[pos];
-
         Vector3 current = piece.transform.position;
-        Vector3 target = square.transform.position;
+        Vector3 target  = square.transform.position;
         piece.transform.position = new Vector3(target.x, current.y, target.z);
     }
 
     private void StartPromotion(Pawn pawn)
     {
         isPromotionPending = true;
-
-        pendingPromotionPos = pawn.boardPosition;
-        pendingPromotionColor = pawn.color;
-        pendingPawnObject = pawn.gameObject;
-        pendingPawnParent = pawn.transform.parent;
-        pendingPawnRotation = pawn.transform.rotation;
-        pendingPawnPosition = pawn.transform.position;
-
-        Debug.Log("昇格待ちです。Q=Queen / R=Rook / B=Bishop / N=Knight");
+        promotionPos   = pawn.boardPosition;
+        promotionColor = pawn.color;
+        pawnObj        = pawn.gameObject;
+        pawnParent     = pawn.transform.parent;
+        pawnRot        = pawn.transform.rotation;
+        pawnPos        = pawn.transform.position;
     }
 
-    public bool CompletePromotion(PieceType promotionType)
+    public bool CompletePromotion(PieceType type)
     {
-        if (!isPromotionPending || pendingPawnObject == null)
-            return false;
+        Destroy(pawnObj);
 
-        if (promotionType != PieceType.Queen &&
-            promotionType != PieceType.Rook &&
-            promotionType != PieceType.Bishop &&
-            promotionType != PieceType.Knight)
-        {
-            Debug.LogWarning("無効な昇格先です");
-            return false;
-        }
+        GameObject prefab = promotionColor == PieceColor.White
+            ? type == PieceType.Queen  ? whiteQueenPromotionPrefab  :
+              type == PieceType.Rook   ? whiteRookPromotionPrefab   :
+              type == PieceType.Bishop ? whiteBishopPromotionPrefab :
+              whiteKnightPromotionPrefab
+            : type == PieceType.Queen  ? blackQueenPromotionPrefab  :
+              type == PieceType.Rook   ? blackRookPromotionPrefab   :
+              type == PieceType.Bishop ? blackBishopPromotionPrefab :
+              blackKnightPromotionPrefab;
 
-        board[pendingPromotionPos.x, pendingPromotionPos.y] = null;
+        GameObject obj      = Instantiate(prefab, pawnPos, pawnRot, pawnParent);
+        Piece      newPiece = obj.GetComponent<Piece>();
+        newPiece.color         = promotionColor;
+        newPiece.pieceType     = type;
+        newPiece.boardPosition = promotionPos;
 
-        GameObject prefab = GetPromotionPrefab(pendingPromotionColor, promotionType);
-        if (prefab == null)
-        {
-            Debug.LogWarning($"昇格用Prefabが設定されていません: {pendingPromotionColor} {promotionType}");
-            return false;
-        }
-
-        Destroy(pendingPawnObject);
-
-        GameObject obj = Instantiate(
-            prefab,
-            pendingPawnPosition,
-            pendingPawnRotation,
-            pendingPawnParent
-        );
-
-        Piece newPiece = obj.GetComponent<Piece>();
-        newPiece.color = pendingPromotionColor;
-        newPiece.boardPosition = pendingPromotionPos;
-        newPiece.hasMoved = true;
-        newPiece.pieceType = promotionType;
-
-        board[pendingPromotionPos.x, pendingPromotionPos.y] = newPiece;
-        MovePieceToSquare(newPiece, pendingPromotionPos);
-
-        Debug.Log($"{obj.name} が {promotionType} に昇格しました");
-
+        board[promotionPos.x, promotionPos.y] = newPiece;
         isPromotionPending = false;
-        pendingPawnObject = null;
-
         return true;
-    }
-
-    private GameObject GetPromotionPrefab(PieceColor color, PieceType type)
-    {
-        if (color == PieceColor.White)
-        {
-            switch (type)
-            {
-                case PieceType.Queen: return whiteQueenPromotionPrefab;
-                case PieceType.Rook: return whiteRookPromotionPrefab;
-                case PieceType.Bishop: return whiteBishopPromotionPrefab;
-                case PieceType.Knight: return whiteKnightPromotionPrefab;
-            }
-        }
-        else
-        {
-            switch (type)
-            {
-                case PieceType.Queen: return blackQueenPromotionPrefab;
-                case PieceType.Rook: return blackRookPromotionPrefab;
-                case PieceType.Bishop: return blackBishopPromotionPrefab;
-                case PieceType.Knight: return blackKnightPromotionPrefab;
-            }
-        }
-
-        return null;
-    }
-
-    public ChessSquare GetSquare(string squareName)
-    {
-        squareName = squareName.ToLower();
-
-        if (squaresByName.ContainsKey(squareName))
-            return squaresByName[squareName];
-
-        return null;
-    }
-
-    private bool Inside(Vector2Int pos)
-    {
-        return pos.x >= 0 && pos.x < 8 && pos.y >= 0 && pos.y < 8;
     }
 }

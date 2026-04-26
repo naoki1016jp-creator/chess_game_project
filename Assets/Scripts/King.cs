@@ -12,7 +12,6 @@ public class King : Piece
     {
         List<Move> moves = new List<Move>();
 
-        // 通常の1マス移動
         for (int dx = -1; dx <= 1; dx++)
         {
             for (int dy = -1; dy <= 1; dy++)
@@ -23,15 +22,12 @@ public class King : Piece
                 int y = boardPosition.y + dy;
 
                 if (Inside(x, y) && (Empty(board, x, y) || Enemy(board, x, y)))
-                {
                     moves.Add(new Move(boardPosition, new Vector2Int(x, y)));
-                }
             }
         }
 
         int row = boardPosition.y;
 
-        // キング側キャスリング
         if (ChessRules.CanCastleKingSide(board, this))
         {
             Move castleMove = new Move(boardPosition, new Vector2Int(6, row));
@@ -41,7 +37,6 @@ public class King : Piece
             moves.Add(castleMove);
         }
 
-        // クイーン側キャスリング
         if (ChessRules.CanCastleQueenSide(board, this))
         {
             Move castleMove = new Move(boardPosition, new Vector2Int(2, row));

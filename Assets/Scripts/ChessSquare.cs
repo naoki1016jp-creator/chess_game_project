@@ -9,7 +9,6 @@ public class ChessSquare : MonoBehaviour
     {
         if (string.IsNullOrEmpty(squareName))
             squareName = gameObject.name.ToLower();
-
         ParseSquareName();
     }
 
@@ -17,17 +16,15 @@ public class ChessSquare : MonoBehaviour
     {
         if (string.IsNullOrEmpty(squareName))
             squareName = gameObject.name.ToLower();
-
         ParseSquareName();
     }
 
     private void ParseSquareName()
     {
-        if (string.IsNullOrEmpty(squareName) || squareName.Length < 2)
-            return;
+        if (string.IsNullOrEmpty(squareName) || squareName.Length < 2) return;
 
-        char fileChar = char.ToLower(squareName[0]); // a〜h
-        char rankChar = squareName[1];               // 1〜8
+        char fileChar = char.ToLower(squareName[0]);
+        char rankChar = squareName[1];
 
         int x = fileChar - 'a';
         int y = rankChar - '1';

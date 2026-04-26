@@ -1,25 +1,29 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ChessInput : MonoBehaviour
 {
     public Camera targetCamera;
     public GameManager gameManager;
+    public BoardHighlighter boardHighlighter;
 
     private Piece selectedPiece;
 
     private void Start()
     {
         if (targetCamera == null)
-        {
-            targetCamera = Camera.main;
-        }
+        targetCamera = Camera.main;
+
+        if (boardHighlighter == null)
+        boardHighlighter = FindObjectsByType<BoardHighlighter>(FindObjectsInactive.Include, FindObjectsSortMode.None)[0];
+
+        Debug.Log($"[ChessInput] Start. Camera={targetCamera}, GameManager={gameManager}, BoardHighlighter={boardHighlighter}");
     }
 
     private void Update()
     {
         if (gameManager == null) return;
 
-        // 昇格待ち中はキー入力のみ受け付ける
         if (gameManager.boardManager != null && gameManager.boardManager.IsPromotionPending)
         {
             HandlePromotionInput();
@@ -28,6 +32,7 @@ public class ChessInput : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("[ChessInput] クリック検知");
             HandleClick();
         }
     }
@@ -35,40 +40,33 @@ public class ChessInput : MonoBehaviour
     private void HandlePromotionInput()
     {
         if (Input.GetKeyDown(KeyCode.Q))
-        {
             gameManager.ConfirmPromotion(PieceType.Queen);
-        }
         else if (Input.GetKeyDown(KeyCode.R))
-        {
             gameManager.ConfirmPromotion(PieceType.Rook);
-        }
         else if (Input.GetKeyDown(KeyCode.B))
-        {
             gameManager.ConfirmPromotion(PieceType.Bishop);
-        }
         else if (Input.GetKeyDown(KeyCode.N))
-        {
             gameManager.ConfirmPromotion(PieceType.Knight);
-        }
     }
 
     private void HandleClick()
     {
         if (gameManager != null && gameManager.isGameOver)
-        {
             return;
-        }
 
         if (targetCamera == null)
         {
-            Debug.LogWarning("Camera が設定されていません");
+            Debug.LogWarning("[ChessInput] Camera が設定されていません");
             return;
         }
 
         Ray ray = targetCamera.ScreenPointToRay(Input.mousePosition);
+        Debug.Log($"[ChessInput] Raycast発射 from {Input.mousePosition}");
 
         if (Physics.Raycast(ray, out RaycastHit hit, 200f))
         {
+            Debug.Log($"[ChessInput] ヒット: {hit.collider.gameObject.name}");
+
             Piece clickedPiece = hit.collider.GetComponentInParent<Piece>();
             if (clickedPiece != null)
             {
@@ -83,10 +81,12 @@ public class ChessInput : MonoBehaviour
                 return;
             }
 
+            Debug.Log("[ChessInput] 駒もマスもヒットしませんでした");
             DeselectPiece();
         }
         else
         {
+            Debug.Log("[ChessInput] Raycastが何にもヒットしませんでした");
             DeselectPiece();
         }
     }
@@ -96,9 +96,7 @@ public class ChessInput : MonoBehaviour
         if (selectedPiece == null)
         {
             if (clickedPiece.color == gameManager.currentTurn)
-            {
                 SelectPiece(clickedPiece);
-            }
             return;
         }
 
@@ -118,6 +116,7 @@ public class ChessInput : MonoBehaviour
 
         if (moved)
         {
+            ClearHighlights();
             selectedPiece = null;
         }
         else
@@ -135,6 +134,7 @@ public class ChessInput : MonoBehaviour
 
         if (moved)
         {
+            ClearHighlights();
             selectedPiece = null;
         }
         else
@@ -143,14 +143,25 @@ public class ChessInput : MonoBehaviour
         }
     }
 
-    private void SelectPiece(Piece piece)
-    {
-        selectedPiece = piece;
-        Debug.Log($"選択: {piece.name} ({piece.boardPosition.x}, {piece.boardPosition.y})");
-    }
+   private void SelectPiece(Piece piece)
+{
+    selectedPiece = piece;
+    Debug.Log($"選択: {piece.name} ({piece.boardPosition.x}, {piece.boardPosition.y})");
 
+    if (boardHighlighter != null)
+        boardHighlighter.ShowMoves(piece, gameManager.boardManager.board);
+    else
+        Debug.LogWarning("[ChessInput] boardHighlighterがnullです！");
+}
     private void DeselectPiece()
     {
         selectedPiece = null;
+        ClearHighlights();
+    }
+
+    private void ClearHighlights()
+    {
+        if (boardHighlighter != null)
+            boardHighlighter.ClearAll();
     }
 }

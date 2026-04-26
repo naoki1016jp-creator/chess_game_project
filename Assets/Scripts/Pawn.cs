@@ -19,26 +19,16 @@ public class Pawn : Piece
         int x = boardPosition.x;
         int y = boardPosition.y;
 
-        // 前に1マス
         if (Inside(x, y + dir) && Empty(board, x, y + dir))
         {
             Move move = new Move(boardPosition, new Vector2Int(x, y + dir));
-
-            if (y + dir == promotionRow)
-            {
-                move.isPromotion = true;
-            }
-
+            if (y + dir == promotionRow) move.isPromotion = true;
             moves.Add(move);
 
-            // 初手2マス
             if (!hasMoved && y == startRow && Inside(x, y + dir * 2) && Empty(board, x, y + dir * 2))
-            {
                 moves.Add(new Move(boardPosition, new Vector2Int(x, y + dir * 2)));
-            }
         }
 
-        // 斜め取り
         foreach (int dx in new int[] { -1, 1 })
         {
             int nx = x + dx;
@@ -47,13 +37,24 @@ public class Pawn : Piece
             if (Inside(nx, ny) && Enemy(board, nx, ny))
             {
                 Move move = new Move(boardPosition, new Vector2Int(nx, ny));
-
-                if (ny == promotionRow)
-                {
-                    move.isPromotion = true;
-                }
-
+                if (ny == promotionRow) move.isPromotion = true;
                 moves.Add(move);
+            }
+
+            // アンパッサン
+            Move lastMove = BoardManager.LastMove;
+            if (lastMove != null &&
+                board[lastMove.to.x, lastMove.to.y] != null &&
+                board[lastMove.to.x, lastMove.to.y].pieceType == PieceType.Pawn &&
+                board[lastMove.to.x, lastMove.to.y].color != color &&
+                Mathf.Abs(lastMove.from.y - lastMove.to.y) == 2 &&
+                lastMove.to.x == nx &&
+                lastMove.to.y == y)
+            {
+                Move epMove = new Move(boardPosition, new Vector2Int(nx, ny));
+                epMove.isEnPassant = true;
+                epMove.enPassantCapturedPos = lastMove.to;
+                moves.Add(epMove);
             }
         }
 

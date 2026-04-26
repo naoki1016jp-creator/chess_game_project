@@ -124,6 +124,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2908962462181730235, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &10181337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10181335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 1
+  gridPos: {x: 3, y: 6}
 --- !u!64 &10181341
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -222,6 +237,7 @@ GameObject:
   - component: {fileID: 19912922}
   - component: {fileID: 19912921}
   - component: {fileID: 19912920}
+  - component: {fileID: 19912924}
   - component: {fileID: 19912925}
   - component: {fileID: 19912926}
   m_Layer: 0
@@ -325,6 +341,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &19912924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19912919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 2, y: 4}
 --- !u!114 &19912925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,14 +366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &19912926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +385,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -5851935840457168582, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &26418927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26418925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 0
+  gridPos: {x: 4, y: 1}
 --- !u!64 &26418931
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -489,6 +525,7 @@ GameObject:
   - component: {fileID: 52590445}
   - component: {fileID: 52590444}
   - component: {fileID: 52590443}
+  - component: {fileID: 52590447}
   - component: {fileID: 52590448}
   - component: {fileID: 52590449}
   m_Layer: 0
@@ -592,6 +629,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &52590447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52590442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 0, y: 2}
 --- !u!114 &52590448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,14 +654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &52590449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,6 +673,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -8514849019304768289, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &54894977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54894975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 3
+  color: 0
+  gridPos: {x: 0, y: 5}
 --- !u!64 &54894981
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -772,6 +829,7 @@ GameObject:
   - component: {fileID: 156398974}
   - component: {fileID: 156398973}
   - component: {fileID: 156398972}
+  - component: {fileID: 156398976}
   - component: {fileID: 156398977}
   - component: {fileID: 156398978}
   m_Layer: 0
@@ -875,6 +933,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &156398976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156398971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 2, y: 2}
 --- !u!114 &156398977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -887,14 +958,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &156398978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,6 +1016,7 @@ GameObject:
   - component: {fileID: 205710432}
   - component: {fileID: 205710431}
   - component: {fileID: 205710430}
+  - component: {fileID: 205710434}
   - component: {fileID: 205710435}
   - component: {fileID: 205710436}
   m_Layer: 0
@@ -1056,6 +1120,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &205710434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205710429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 6, y: 3}
 --- !u!114 &205710435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1068,14 +1145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &205710436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1129,6 +1198,7 @@ GameObject:
   - component: {fileID: 265232421}
   - component: {fileID: 265232420}
   - component: {fileID: 265232419}
+  - component: {fileID: 265232423}
   - component: {fileID: 265232424}
   - component: {fileID: 265232425}
   m_Layer: 0
@@ -1232,6 +1302,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &265232423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265232418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 0, y: 7}
 --- !u!114 &265232424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1244,14 +1327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &265232425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1278,6 +1353,7 @@ GameObject:
   - component: {fileID: 267317321}
   - component: {fileID: 267317320}
   - component: {fileID: 267317319}
+  - component: {fileID: 267317323}
   - component: {fileID: 267317324}
   - component: {fileID: 267317325}
   m_Layer: 0
@@ -1381,6 +1457,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &267317323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267317318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 0, y: 1}
 --- !u!114 &267317324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1393,14 +1482,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &267317325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,6 +1508,7 @@ GameObject:
   - component: {fileID: 279213176}
   - component: {fileID: 279213175}
   - component: {fileID: 279213174}
+  - component: {fileID: 279213178}
   - component: {fileID: 279213179}
   - component: {fileID: 279213180}
   m_Layer: 0
@@ -1530,6 +1612,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &279213178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279213173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 5, y: 2}
 --- !u!114 &279213179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1542,14 +1637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &279213180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1576,6 +1663,7 @@ GameObject:
   - component: {fileID: 293755200}
   - component: {fileID: 293755199}
   - component: {fileID: 293755198}
+  - component: {fileID: 293755202}
   - component: {fileID: 293755203}
   - component: {fileID: 293755204}
   m_Layer: 0
@@ -1679,6 +1767,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &293755202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293755197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 0, y: 4}
 --- !u!114 &293755203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1691,14 +1792,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &293755204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1769,7 +1862,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   m_Layer: 0
-  m_Name: Camera 2p
+  m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1825,7 +1918,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 1
+  m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
@@ -1842,13 +1935,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.46174863, y: 0, z: 0, w: 0.8870109}
-  m_LocalPosition: {x: 0, y: 14, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1554121278}
-  m_LocalEulerAnglesHint: {x: 55, y: 0, z: 0}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1910,6 +2003,8 @@ GameObject:
   - component: {fileID: 386800749}
   - component: {fileID: 386800748}
   - component: {fileID: 386800747}
+  - component: {fileID: 386800752}
+  - component: {fileID: 386800751}
   - component: {fileID: 386800753}
   - component: {fileID: 386800754}
   m_Layer: 0
@@ -2013,6 +2108,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &386800751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386800746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 0, y: 0}
+--- !u!114 &386800752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386800746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 4, y: 0}
 --- !u!114 &386800753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2025,14 +2146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &386800754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2052,6 +2165,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 206021850397100986, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &426161863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426161861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 1
+  gridPos: {x: 7, y: 6}
 --- !u!64 &426161867
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2143,6 +2271,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3385748226457803781, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &445642491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445642489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 1
+  gridPos: {x: 5, y: 6}
 --- !u!64 &445642495
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2284,6 +2427,7 @@ GameObject:
   - component: {fileID: 453770147}
   - component: {fileID: 453770146}
   - component: {fileID: 453770145}
+  - component: {fileID: 453770149}
   - component: {fileID: 453770150}
   - component: {fileID: 453770151}
   m_Layer: 0
@@ -2387,6 +2531,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &453770149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453770144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 2, y: 4}
 --- !u!114 &453770150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2399,14 +2556,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &453770151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2421,6 +2570,134 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChessSquare
   squareName: b5
   boardPosition: {x: 1, y: 4}
+--- !u!1 &465979580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 465979581}
+  - component: {fileID: 465979583}
+  - component: {fileID: 465979582}
+  m_Layer: 0
+  m_Name: Camera 2p
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &465979581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465979580}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.46174863, y: 0, z: 0, w: 0.8870109}
+  m_LocalPosition: {x: 0.20000076, y: 25.5, z: -5.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1554121278}
+  m_LocalEulerAnglesHint: {x: 55, y: 0, z: 0}
+--- !u!114 &465979582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465979580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
+--- !u!20 &465979583
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465979580}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 2
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 0.1
+  m_FocalLength: 35
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 32, y: 18}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 10
+  far clip plane: 9999.999
+  field of view: 28.841547
+  orthographic: 0
+  orthographic size: 0.25714278
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 1
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &486175672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,6 +2710,7 @@ GameObject:
   - component: {fileID: 486175675}
   - component: {fileID: 486175674}
   - component: {fileID: 486175673}
+  - component: {fileID: 486175677}
   - component: {fileID: 486175678}
   - component: {fileID: 486175679}
   m_Layer: 0
@@ -2536,6 +2814,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &486175677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486175672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 4, y: 5}
 --- !u!114 &486175678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2548,14 +2839,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &486175679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2570,6 +2853,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChessSquare
   squareName: e6
   boardPosition: {x: 4, y: 5}
+--- !u!114 &501063664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782410494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 1
+  gridPos: {x: 2, y: 6}
 --- !u!1 &538844974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2579,9 +2877,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 538844976}
+  - component: {fileID: 538844975}
+  - component: {fileID: 538844977}
   - component: {fileID: 538844978}
   - component: {fileID: 538844979}
-  - component: {fileID: 538844980}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2589,6 +2888,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &538844975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538844974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f353a057c54b2c489a5674122e37791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessGameManager
+  currentTurn: 0
+  selectedPiece: {fileID: 0}
+  originalColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  camera1p: {fileID: 2118223666}
+  camera2p: {fileID: 465979583}
 --- !u!4 &538844976
 Transform:
   m_ObjectHideFlags: 0
@@ -2604,6 +2924,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &538844977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538844974}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f353a057c54b2c489a5674122e37791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessGameManager
+  currentTurn: 0
+  selectedPiece: {fileID: 0}
+  originalColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  camera1p: {fileID: 2118223666}
+  camera2p: {fileID: 465979583}
 --- !u!114 &538844978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2619,6 +2960,9 @@ MonoBehaviour:
   boardManager: {fileID: 1554121280}
   currentTurn: 0
   isGameOver: 0
+  winner: 0
+  stopTimeOnGameOver: 1
+  viewManager: {fileID: 0}
 --- !u!114 &538844979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2633,25 +2977,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChessInput
   targetCamera: {fileID: 2118223666}
   gameManager: {fileID: 538844978}
-  boardHighlighter: {fileID: 928834331}
---- !u!114 &538844980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538844974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6615c34c1ba0a4843b436e1b193d7163, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SquareHighlighter
-  selectedColor: {r: 1, g: 0.9, b: 0.1, a: 0.8}
-  moveColor: {r: 0.2, g: 0.85, b: 0.3, a: 0.7}
-  captureColor: {r: 0.95, g: 0.2, b: 0.2, a: 0.75}
-  usePulse: 1
-  pulseSpeed: 2.5
-  pulseAmplitude: 0.18
 --- !u!1 &572543622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2664,6 +2989,7 @@ GameObject:
   - component: {fileID: 572543625}
   - component: {fileID: 572543624}
   - component: {fileID: 572543623}
+  - component: {fileID: 572543627}
   - component: {fileID: 572543628}
   - component: {fileID: 572543629}
   m_Layer: 0
@@ -2767,6 +3093,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &572543627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572543622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 3, y: 2}
 --- !u!114 &572543628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2779,14 +3118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &572543629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2813,6 +3144,7 @@ GameObject:
   - component: {fileID: 577707350}
   - component: {fileID: 577707349}
   - component: {fileID: 577707348}
+  - component: {fileID: 577707352}
   - component: {fileID: 577707353}
   - component: {fileID: 577707354}
   m_Layer: 0
@@ -2916,6 +3248,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &577707352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577707347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 6, y: 4}
 --- !u!114 &577707353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2928,14 +3273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &577707354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2962,6 +3299,7 @@ GameObject:
   - component: {fileID: 590782957}
   - component: {fileID: 590782956}
   - component: {fileID: 590782955}
+  - component: {fileID: 590782959}
   - component: {fileID: 590782960}
   - component: {fileID: 590782961}
   m_Layer: 0
@@ -3065,6 +3403,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &590782959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590782954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 0, y: 3}
 --- !u!114 &590782960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3077,14 +3428,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &590782961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3111,6 +3454,7 @@ GameObject:
   - component: {fileID: 601697599}
   - component: {fileID: 601697598}
   - component: {fileID: 601697597}
+  - component: {fileID: 601697601}
   - component: {fileID: 601697602}
   - component: {fileID: 601697603}
   m_Layer: 0
@@ -3214,6 +3558,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &601697601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601697596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 3, y: 6}
 --- !u!114 &601697602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3226,14 +3583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &601697603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3260,6 +3609,7 @@ GameObject:
   - component: {fileID: 603903840}
   - component: {fileID: 603903839}
   - component: {fileID: 603903838}
+  - component: {fileID: 603903842}
   - component: {fileID: 603903843}
   - component: {fileID: 603903844}
   m_Layer: 0
@@ -3363,6 +3713,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &603903842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603903837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 3, y: 1}
 --- !u!114 &603903843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3375,14 +3738,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &603903844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3409,6 +3764,7 @@ GameObject:
   - component: {fileID: 605410017}
   - component: {fileID: 605410016}
   - component: {fileID: 605410015}
+  - component: {fileID: 605410019}
   - component: {fileID: 605410020}
   - component: {fileID: 605410021}
   m_Layer: 0
@@ -3512,6 +3868,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &605410019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605410014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 4, y: 4}
 --- !u!114 &605410020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3524,14 +3893,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &605410021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3551,6 +3912,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8119124689580570154, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &612353728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612353726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 2
+  color: 0
+  gridPos: {x: 0, y: 6}
 --- !u!64 &612353732
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3649,6 +4025,7 @@ GameObject:
   - component: {fileID: 613736765}
   - component: {fileID: 613736764}
   - component: {fileID: 613736763}
+  - component: {fileID: 613736767}
   - component: {fileID: 613736768}
   - component: {fileID: 613736769}
   m_Layer: 0
@@ -3752,6 +4129,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &613736767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613736762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 0, y: 1}
 --- !u!114 &613736768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3764,14 +4154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &613736769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3786,6 +4168,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChessSquare
   squareName: a2
   boardPosition: {x: 0, y: 1}
+--- !u!114 &620428417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782410495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 1
+  gridPos: {x: 1, y: 6}
 --- !u!1 &642398322
 GameObject:
   m_ObjectHideFlags: 0
@@ -3798,6 +4195,7 @@ GameObject:
   - component: {fileID: 642398325}
   - component: {fileID: 642398324}
   - component: {fileID: 642398323}
+  - component: {fileID: 642398327}
   - component: {fileID: 642398328}
   - component: {fileID: 642398329}
   m_Layer: 0
@@ -3901,6 +4299,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &642398327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642398322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 3, y: 3}
 --- !u!114 &642398328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3913,14 +4324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &642398329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3947,6 +4350,7 @@ GameObject:
   - component: {fileID: 648813770}
   - component: {fileID: 648813769}
   - component: {fileID: 648813768}
+  - component: {fileID: 648813772}
   - component: {fileID: 648813773}
   - component: {fileID: 648813774}
   m_Layer: 0
@@ -4050,6 +4454,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &648813772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648813767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 5, y: 3}
 --- !u!114 &648813773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4062,14 +4479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &648813774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4096,6 +4505,7 @@ GameObject:
   - component: {fileID: 680522660}
   - component: {fileID: 680522659}
   - component: {fileID: 680522658}
+  - component: {fileID: 680522662}
   - component: {fileID: 680522663}
   - component: {fileID: 680522664}
   m_Layer: 0
@@ -4199,6 +4609,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &680522662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680522657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 6, y: 6}
 --- !u!114 &680522663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4211,14 +4634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &680522664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4233,11 +4648,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChessSquare
   squareName: g7
   boardPosition: {x: 6, y: 6}
+--- !u!114 &743653378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782410496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 1
+  gridPos: {x: 0, y: 6}
 --- !u!1 &744952064 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4512244058390244165, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &744952066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744952064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 1
+  gridPos: {x: 4, y: 6}
 --- !u!64 &744952070
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4336,6 +4781,7 @@ GameObject:
   - component: {fileID: 745757653}
   - component: {fileID: 745757652}
   - component: {fileID: 745757651}
+  - component: {fileID: 745757655}
   - component: {fileID: 745757656}
   - component: {fileID: 745757657}
   m_Layer: 0
@@ -4439,6 +4885,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &745757655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745757650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 2, y: 1}
 --- !u!114 &745757656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4451,14 +4910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &745757657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4485,6 +4936,7 @@ GameObject:
   - component: {fileID: 811984035}
   - component: {fileID: 811984034}
   - component: {fileID: 811984033}
+  - component: {fileID: 811984037}
   - component: {fileID: 811984038}
   - component: {fileID: 811984039}
   m_Layer: 0
@@ -4588,6 +5040,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &811984037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811984032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 4, y: 3}
 --- !u!114 &811984038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4600,14 +5065,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &811984039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4676,6 +5133,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 932009505995833821, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &847023723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847023721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 0
+  gridPos: {x: 2, y: 1}
 --- !u!64 &847023727
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4774,6 +5246,7 @@ GameObject:
   - component: {fileID: 857869307}
   - component: {fileID: 857869306}
   - component: {fileID: 857869305}
+  - component: {fileID: 857869309}
   - component: {fileID: 857869310}
   - component: {fileID: 857869311}
   m_Layer: 0
@@ -4877,6 +5350,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &857869309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857869304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 2, y: 5}
 --- !u!114 &857869310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4889,14 +5375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &857869311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4923,6 +5401,7 @@ GameObject:
   - component: {fileID: 865818250}
   - component: {fileID: 865818249}
   - component: {fileID: 865818248}
+  - component: {fileID: 865818252}
   - component: {fileID: 865818253}
   - component: {fileID: 865818254}
   m_Layer: 0
@@ -5026,6 +5505,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &865818252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865818247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 6, y: 1}
 --- !u!114 &865818253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5038,14 +5530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &865818254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5072,6 +5556,7 @@ GameObject:
   - component: {fileID: 890848539}
   - component: {fileID: 890848538}
   - component: {fileID: 890848537}
+  - component: {fileID: 890848541}
   - component: {fileID: 890848542}
   - component: {fileID: 890848543}
   m_Layer: 0
@@ -5175,6 +5660,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &890848541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890848536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 7, y: 0}
 --- !u!114 &890848542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5187,14 +5685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &890848543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5214,6 +5704,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -3541267358267315357, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &908601538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908601536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 1
+  color: 1
+  gridPos: {x: 0, y: 7}
 --- !u!64 &908601542
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5284,6 +5789,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &908601551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908601536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e393dc9d016bc34190c8b62d93edd54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rook
+  color: 1
+  pieceType: 1
+  boardPosition: {x: 0, y: 0}
+  hasMoved: 0
 --- !u!1 &918786279
 GameObject:
   m_ObjectHideFlags: 0
@@ -5296,6 +5817,7 @@ GameObject:
   - component: {fileID: 918786282}
   - component: {fileID: 918786281}
   - component: {fileID: 918786280}
+  - component: {fileID: 918786284}
   - component: {fileID: 918786285}
   - component: {fileID: 918786286}
   m_Layer: 0
@@ -5399,6 +5921,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &918786284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918786279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 2, y: 3}
 --- !u!114 &918786285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5411,14 +5946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &918786286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5445,6 +5972,7 @@ GameObject:
   - component: {fileID: 919965938}
   - component: {fileID: 919965937}
   - component: {fileID: 919965936}
+  - component: {fileID: 919965940}
   - component: {fileID: 919965941}
   - component: {fileID: 919965942}
   m_Layer: 0
@@ -5548,6 +6076,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &919965940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919965935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 6, y: 7}
 --- !u!114 &919965941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5560,14 +6101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &919965942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5582,50 +6115,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChessSquare
   squareName: g8
   boardPosition: {x: 6, y: 7}
---- !u!1 &928834330
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 928834332}
-  - component: {fileID: 928834331}
-  m_Layer: 0
-  m_Name: HighlighterManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &928834331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 928834330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a84637c9b043b5e43a381c5a150928fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BoardHighlighter
---- !u!4 &928834332
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 928834330}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.66531, y: 10.73187, z: 3.59516}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &957637967
 GameObject:
   m_ObjectHideFlags: 0
@@ -5638,6 +6127,7 @@ GameObject:
   - component: {fileID: 957637970}
   - component: {fileID: 957637969}
   - component: {fileID: 957637968}
+  - component: {fileID: 957637972}
   - component: {fileID: 957637973}
   - component: {fileID: 957637974}
   m_Layer: 0
@@ -5741,6 +6231,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &957637972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957637967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 5, y: 4}
 --- !u!114 &957637973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5753,14 +6256,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &957637974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5787,6 +6282,7 @@ GameObject:
   - component: {fileID: 970318173}
   - component: {fileID: 970318172}
   - component: {fileID: 970318171}
+  - component: {fileID: 970318175}
   - component: {fileID: 970318176}
   - component: {fileID: 970318177}
   m_Layer: 0
@@ -5890,6 +6386,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &970318175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970318170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 2, y: 3}
 --- !u!114 &970318176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5902,14 +6411,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &970318177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5936,6 +6437,7 @@ GameObject:
   - component: {fileID: 984044125}
   - component: {fileID: 984044124}
   - component: {fileID: 984044123}
+  - component: {fileID: 984044127}
   - component: {fileID: 984044128}
   - component: {fileID: 984044129}
   m_Layer: 0
@@ -6039,6 +6541,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &984044127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984044122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 2, y: 6}
 --- !u!114 &984044128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6051,14 +6566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &984044129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6085,6 +6592,7 @@ GameObject:
   - component: {fileID: 988200955}
   - component: {fileID: 988200954}
   - component: {fileID: 988200953}
+  - component: {fileID: 988200957}
   - component: {fileID: 988200958}
   - component: {fileID: 988200959}
   m_Layer: 0
@@ -6188,6 +6696,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &988200957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988200952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 2, y: 2}
 --- !u!114 &988200958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6200,14 +6721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &988200959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6234,8 +6747,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918ecc0353c8e8e44bc13c9c9d6e3555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Knight
-  color: 0
-  pieceType: 0
+  color: 1
+  pieceType: 2
   boardPosition: {x: 0, y: 0}
   hasMoved: 0
 --- !u!1 &1030345802
@@ -6250,6 +6763,7 @@ GameObject:
   - component: {fileID: 1030345805}
   - component: {fileID: 1030345804}
   - component: {fileID: 1030345803}
+  - component: {fileID: 1030345807}
   - component: {fileID: 1030345808}
   - component: {fileID: 1030345809}
   m_Layer: 0
@@ -6353,6 +6867,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1030345807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030345802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 4, y: 7}
 --- !u!114 &1030345808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6365,14 +6892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1030345809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6495,6 +7014,7 @@ GameObject:
   - component: {fileID: 1067767319}
   - component: {fileID: 1067767318}
   - component: {fileID: 1067767317}
+  - component: {fileID: 1067767321}
   - component: {fileID: 1067767322}
   - component: {fileID: 1067767323}
   m_Layer: 0
@@ -6598,6 +7118,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1067767321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067767316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 5, y: 5}
 --- !u!114 &1067767322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6610,14 +7143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1067767323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6644,6 +7169,7 @@ GameObject:
   - component: {fileID: 1076912862}
   - component: {fileID: 1076912861}
   - component: {fileID: 1076912860}
+  - component: {fileID: 1076912864}
   - component: {fileID: 1076912865}
   - component: {fileID: 1076912866}
   m_Layer: 0
@@ -6747,6 +7273,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1076912864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076912859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 7, y: 7}
 --- !u!114 &1076912865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6759,14 +7298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1076912866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6793,6 +7324,7 @@ GameObject:
   - component: {fileID: 1129881695}
   - component: {fileID: 1129881694}
   - component: {fileID: 1129881693}
+  - component: {fileID: 1129881697}
   - component: {fileID: 1129881698}
   - component: {fileID: 1129881699}
   m_Layer: 0
@@ -6896,6 +7428,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1129881697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129881692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 5, y: 0}
 --- !u!114 &1129881698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6908,14 +7453,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1129881699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6935,6 +7472,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -8173925182797674307, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1133427204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133427202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 4
+  color: 1
+  gridPos: {x: 3, y: 7}
 --- !u!64 &1133427208
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7005,7 +7557,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1133427221
+--- !u!114 &1133427217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7014,7 +7566,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1133427202}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a2fb8a224c4f0f4cb7d186e6bf8bb6b, type: 3}
+  m_Script: {fileID: 11500000, guid: a96942387327f804c988cd87bf09df82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Queen
   color: 1
@@ -7033,6 +7585,7 @@ GameObject:
   - component: {fileID: 1157920038}
   - component: {fileID: 1157920037}
   - component: {fileID: 1157920036}
+  - component: {fileID: 1157920040}
   - component: {fileID: 1157920041}
   - component: {fileID: 1157920042}
   m_Layer: 0
@@ -7136,6 +7689,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1157920040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157920035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 5, y: 1}
 --- !u!114 &1157920041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7148,14 +7714,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1157920042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7209,6 +7767,7 @@ GameObject:
   - component: {fileID: 1237196041}
   - component: {fileID: 1237196040}
   - component: {fileID: 1237196039}
+  - component: {fileID: 1237196043}
   - component: {fileID: 1237196044}
   - component: {fileID: 1237196045}
   m_Layer: 0
@@ -7312,6 +7871,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1237196043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237196038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 2, y: 0}
 --- !u!114 &1237196044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7324,14 +7896,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1237196045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7358,6 +7922,7 @@ GameObject:
   - component: {fileID: 1239707458}
   - component: {fileID: 1239707457}
   - component: {fileID: 1239707456}
+  - component: {fileID: 1239707460}
   - component: {fileID: 1239707461}
   - component: {fileID: 1239707462}
   m_Layer: 0
@@ -7461,6 +8026,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1239707460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239707455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 6, y: 5}
 --- !u!114 &1239707461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7473,14 +8051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1239707462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7507,6 +8077,7 @@ GameObject:
   - component: {fileID: 1243658301}
   - component: {fileID: 1243658300}
   - component: {fileID: 1243658299}
+  - component: {fileID: 1243658303}
   - component: {fileID: 1243658304}
   - component: {fileID: 1243658305}
   m_Layer: 0
@@ -7610,6 +8181,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1243658303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243658298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 3, y: 0}
 --- !u!114 &1243658304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7622,14 +8206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1243658305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7656,6 +8232,7 @@ GameObject:
   - component: {fileID: 1253610190}
   - component: {fileID: 1253610189}
   - component: {fileID: 1253610188}
+  - component: {fileID: 1253610192}
   - component: {fileID: 1253610193}
   - component: {fileID: 1253610194}
   m_Layer: 0
@@ -7759,6 +8336,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1253610192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253610187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 2, y: 1}
 --- !u!114 &1253610193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7771,14 +8361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1253610194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7805,6 +8387,7 @@ GameObject:
   - component: {fileID: 1271997221}
   - component: {fileID: 1271997220}
   - component: {fileID: 1271997219}
+  - component: {fileID: 1271997223}
   - component: {fileID: 1271997224}
   - component: {fileID: 1271997225}
   m_Layer: 0
@@ -7908,6 +8491,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1271997223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271997218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 3, y: 7}
 --- !u!114 &1271997224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7920,14 +8516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1271997225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8029,6 +8617,7 @@ GameObject:
   - component: {fileID: 1286900700}
   - component: {fileID: 1286900699}
   - component: {fileID: 1286900698}
+  - component: {fileID: 1286900702}
   - component: {fileID: 1286900703}
   - component: {fileID: 1286900704}
   m_Layer: 0
@@ -8132,6 +8721,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1286900702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286900697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 0, y: 5}
 --- !u!114 &1286900703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8144,14 +8746,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1286900704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8205,6 +8799,7 @@ GameObject:
   - component: {fileID: 1385423520}
   - component: {fileID: 1385423519}
   - component: {fileID: 1385423518}
+  - component: {fileID: 1385423522}
   - component: {fileID: 1385423523}
   - component: {fileID: 1385423524}
   m_Layer: 0
@@ -8308,6 +8903,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1385423522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385423517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 0, y: 2}
 --- !u!114 &1385423523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8320,14 +8928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1385423524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8354,6 +8954,7 @@ GameObject:
   - component: {fileID: 1410381803}
   - component: {fileID: 1410381802}
   - component: {fileID: 1410381801}
+  - component: {fileID: 1410381805}
   - component: {fileID: 1410381806}
   - component: {fileID: 1410381807}
   m_Layer: 0
@@ -8457,6 +9058,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1410381805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410381800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 2, y: 7}
 --- !u!114 &1410381806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8469,14 +9083,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1410381807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8503,6 +9109,7 @@ GameObject:
   - component: {fileID: 1415915669}
   - component: {fileID: 1415915668}
   - component: {fileID: 1415915667}
+  - component: {fileID: 1415915671}
   - component: {fileID: 1415915672}
   - component: {fileID: 1415915673}
   m_Layer: 0
@@ -8606,6 +9213,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1415915671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415915666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 2, y: 6}
 --- !u!114 &1415915672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8618,14 +9238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1415915673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8652,6 +9264,7 @@ GameObject:
   - component: {fileID: 1422914262}
   - component: {fileID: 1422914261}
   - component: {fileID: 1422914260}
+  - component: {fileID: 1422914264}
   - component: {fileID: 1422914265}
   - component: {fileID: 1422914266}
   m_Layer: 0
@@ -8755,6 +9368,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1422914264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422914259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 6, y: 2}
 --- !u!114 &1422914265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8767,14 +9393,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1422914266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8801,6 +9419,7 @@ GameObject:
   - component: {fileID: 1439920180}
   - component: {fileID: 1439920179}
   - component: {fileID: 1439920178}
+  - component: {fileID: 1439920182}
   - component: {fileID: 1439920183}
   - component: {fileID: 1439920184}
   m_Layer: 0
@@ -8904,6 +9523,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1439920182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439920177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 5, y: 6}
 --- !u!114 &1439920183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8916,14 +9548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1439920184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8950,6 +9574,7 @@ GameObject:
   - component: {fileID: 1441193304}
   - component: {fileID: 1441193303}
   - component: {fileID: 1441193302}
+  - component: {fileID: 1441193306}
   - component: {fileID: 1441193307}
   - component: {fileID: 1441193308}
   m_Layer: 0
@@ -9053,6 +9678,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1441193306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441193301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 4, y: 6}
 --- !u!114 &1441193307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9065,14 +9703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1441193308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9092,6 +9722,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -6085965840632570164, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1498799521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498799519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 3
+  color: 0
+  gridPos: {x: 0, y: 2}
 --- !u!64 &1498799525
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9190,6 +9835,7 @@ GameObject:
   - component: {fileID: 1533698233}
   - component: {fileID: 1533698232}
   - component: {fileID: 1533698231}
+  - component: {fileID: 1533698235}
   - component: {fileID: 1533698236}
   - component: {fileID: 1533698237}
   m_Layer: 0
@@ -9293,6 +9939,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1533698235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533698230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 4, y: 1}
 --- !u!114 &1533698236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9305,14 +9964,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1533698237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9339,6 +9990,7 @@ GameObject:
   - component: {fileID: 1534116722}
   - component: {fileID: 1534116721}
   - component: {fileID: 1534116720}
+  - component: {fileID: 1534116724}
   - component: {fileID: 1534116725}
   - component: {fileID: 1534116726}
   m_Layer: 0
@@ -9442,6 +10094,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1534116724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534116719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 3, y: 4}
 --- !u!114 &1534116725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9454,14 +10119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1534116726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9481,6 +10138,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -3719026345974798948, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1534455122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534455120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 5
+  color: 0
+  gridPos: {x: 0, y: 4}
 --- !u!64 &1534455126
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9584,19 +10256,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 1653055239}
-  blackQueenPromotionPrefab: {fileID: 1133427202}
-  whiteRookPromotionPrefab: {fileID: 1603003812}
-  blackRookPromotionPrefab: {fileID: 908601536}
-  whiteBishopPromotionPrefab: {fileID: 54894975}
-  blackBishopPromotionPrefab: {fileID: 1782410500}
-  whiteKnightPromotionPrefab: {fileID: 612353726}
-  blackKnightPromotionPrefab: {fileID: 1782410498}
 --- !u!1 &1563648953 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2663752142303553821, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1563648955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563648953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 0
+  gridPos: {x: 3, y: 1}
 --- !u!64 &1563648959
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9688,6 +10367,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -5581499553034481480, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1586233909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586233907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 1
+  color: 0
+  gridPos: {x: 0, y: 0}
 --- !u!64 &1586233913
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9779,6 +10473,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -2808465238259235856, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1597164973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597164971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 0
+  gridPos: {x: 5, y: 1}
 --- !u!64 &1597164977
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9870,6 +10579,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -5127014028821387320, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1603003814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603003812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 1
+  color: 0
+  gridPos: {x: 0, y: 7}
 --- !u!64 &1603003818
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9940,6 +10664,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -8137289912758452444, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1631037817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631037815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 0
+  gridPos: {x: 7, y: 1}
 --- !u!64 &1631037821
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10031,6 +10770,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -4133607979080420952, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1636943410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636943408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 0
+  gridPos: {x: 6, y: 1}
 --- !u!64 &1636943414
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10129,6 +10883,7 @@ GameObject:
   - component: {fileID: 1651613508}
   - component: {fileID: 1651613507}
   - component: {fileID: 1651613506}
+  - component: {fileID: 1651613510}
   - component: {fileID: 1651613511}
   - component: {fileID: 1651613512}
   m_Layer: 0
@@ -10232,6 +10987,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1651613510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651613505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 7, y: 6}
 --- !u!114 &1651613511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10244,14 +11012,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1651613512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10271,6 +11031,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5306094768046066749, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1653055241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653055239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 4
+  color: 0
+  gridPos: {x: 0, y: 3}
 --- !u!64 &1653055245
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10341,7 +11116,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1653055258
+--- !u!114 &1653055254
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10350,7 +11125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1653055239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a2fb8a224c4f0f4cb7d186e6bf8bb6b, type: 3}
+  m_Script: {fileID: 11500000, guid: a96942387327f804c988cd87bf09df82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Queen
   color: 0
@@ -10362,6 +11137,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2150807243578487370, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1654083584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654083582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 0
+  gridPos: {x: 0, y: 1}
 --- !u!64 &1654083588
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10460,6 +11250,7 @@ GameObject:
   - component: {fileID: 1692630831}
   - component: {fileID: 1692630830}
   - component: {fileID: 1692630829}
+  - component: {fileID: 1692630833}
   - component: {fileID: 1692630834}
   - component: {fileID: 1692630835}
   m_Layer: 0
@@ -10563,6 +11354,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1692630833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692630828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 0, y: 4}
 --- !u!114 &1692630834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10575,14 +11379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1692630835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10609,6 +11405,7 @@ GameObject:
   - component: {fileID: 1705506816}
   - component: {fileID: 1705506815}
   - component: {fileID: 1705506814}
+  - component: {fileID: 1705506818}
   - component: {fileID: 1705506819}
   - component: {fileID: 1705506820}
   m_Layer: 0
@@ -10712,6 +11509,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1705506818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705506813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 1, y: 7}
 --- !u!114 &1705506819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10724,14 +11534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1705506820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10758,6 +11560,7 @@ GameObject:
   - component: {fileID: 1739314184}
   - component: {fileID: 1739314183}
   - component: {fileID: 1739314182}
+  - component: {fileID: 1739314186}
   - component: {fileID: 1739314187}
   - component: {fileID: 1739314188}
   m_Layer: 0
@@ -10861,6 +11664,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1739314186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739314181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 5, y: 7}
 --- !u!114 &1739314187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10873,14 +11689,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1739314188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11561,6 +12369,9 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 465979581}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 538844976}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -11757,9 +12568,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 267317322}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 330585546}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -11775,6 +12583,9 @@ PrefabInstance:
       addedObject: {fileID: 176271566}
     - targetCorrespondingSourceObject: {fileID: -5545481567895528312, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1782410506}
+    - targetCorrespondingSourceObject: {fileID: -5545481567895528312, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1281394020}
     - targetCorrespondingSourceObject: {fileID: -5545481567895528312, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -11784,7 +12595,10 @@ PrefabInstance:
       addedObject: {fileID: 28411395}
     - targetCorrespondingSourceObject: {fileID: -5545481567895528312, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1782410521}
+      addedObject: {fileID: 1782410517}
+    - targetCorrespondingSourceObject: {fileID: 7402885913972657137, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1782410505}
     - targetCorrespondingSourceObject: {fileID: 7402885913972657137, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1782410516}
@@ -11796,7 +12610,10 @@ PrefabInstance:
       addedObject: {fileID: 1782410524}
     - targetCorrespondingSourceObject: {fileID: 7402885913972657137, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1782410539}
+      addedObject: {fileID: 1782410532}
+    - targetCorrespondingSourceObject: {fileID: -8486150569621987810, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1782410504}
     - targetCorrespondingSourceObject: {fileID: -8486150569621987810, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1797416438}
@@ -11811,6 +12628,9 @@ PrefabInstance:
       addedObject: {fileID: 1797416446}
     - targetCorrespondingSourceObject: {fileID: 7751986064646270413, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1782410503}
+    - targetCorrespondingSourceObject: {fileID: 7751986064646270413, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 321434961}
     - targetCorrespondingSourceObject: {fileID: 7751986064646270413, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -11821,6 +12641,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7751986064646270413, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1007000836}
+    - targetCorrespondingSourceObject: {fileID: -8601457662603565219, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1782410502}
     - targetCorrespondingSourceObject: {fileID: -8601457662603565219, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1782410514}
@@ -11835,6 +12658,9 @@ PrefabInstance:
       addedObject: {fileID: 1782410531}
     - targetCorrespondingSourceObject: {fileID: -5878314956685608471, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 743653378}
+    - targetCorrespondingSourceObject: {fileID: -5878314956685608471, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 81699667}
     - targetCorrespondingSourceObject: {fileID: -5878314956685608471, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -11845,6 +12671,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5878314956685608471, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2078285187}
+    - targetCorrespondingSourceObject: {fileID: -8852729392857956183, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 620428417}
     - targetCorrespondingSourceObject: {fileID: -8852729392857956183, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 451420018}
@@ -11859,6 +12688,9 @@ PrefabInstance:
       addedObject: {fileID: 2077545262}
     - targetCorrespondingSourceObject: {fileID: 787971649998248765, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 501063664}
+    - targetCorrespondingSourceObject: {fileID: 787971649998248765, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1048325476}
     - targetCorrespondingSourceObject: {fileID: 787971649998248765, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -11869,6 +12701,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 787971649998248765, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2109955371}
+    - targetCorrespondingSourceObject: {fileID: 2908962462181730235, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 10181337}
     - targetCorrespondingSourceObject: {fileID: 2908962462181730235, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 10181342}
@@ -11883,6 +12718,9 @@ PrefabInstance:
       addedObject: {fileID: 10181350}
     - targetCorrespondingSourceObject: {fileID: -4512244058390244165, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 744952066}
+    - targetCorrespondingSourceObject: {fileID: -4512244058390244165, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 744952071}
     - targetCorrespondingSourceObject: {fileID: -4512244058390244165, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -11893,6 +12731,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -4512244058390244165, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 744952079}
+    - targetCorrespondingSourceObject: {fileID: 3385748226457803781, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 445642491}
     - targetCorrespondingSourceObject: {fileID: 3385748226457803781, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 445642496}
@@ -11907,6 +12748,9 @@ PrefabInstance:
       addedObject: {fileID: 445642504}
     - targetCorrespondingSourceObject: {fileID: -7565704435971120096, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1838591397}
+    - targetCorrespondingSourceObject: {fileID: -7565704435971120096, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1838591402}
     - targetCorrespondingSourceObject: {fileID: -7565704435971120096, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -11917,6 +12761,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -7565704435971120096, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1838591410}
+    - targetCorrespondingSourceObject: {fileID: 206021850397100986, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 426161863}
     - targetCorrespondingSourceObject: {fileID: 206021850397100986, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 426161868}
@@ -11931,6 +12778,9 @@ PrefabInstance:
       addedObject: {fileID: 426161876}
     - targetCorrespondingSourceObject: {fileID: -8173925182797674307, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1133427204}
+    - targetCorrespondingSourceObject: {fileID: -8173925182797674307, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1133427209}
     - targetCorrespondingSourceObject: {fileID: -8173925182797674307, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -11940,7 +12790,10 @@ PrefabInstance:
       addedObject: {fileID: 1133427213}
     - targetCorrespondingSourceObject: {fileID: -8173925182797674307, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1133427221}
+      addedObject: {fileID: 1133427217}
+    - targetCorrespondingSourceObject: {fileID: -3541267358267315357, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 908601538}
     - targetCorrespondingSourceObject: {fileID: -3541267358267315357, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 908601543}
@@ -11950,6 +12803,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -3541267358267315357, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 908601547}
+    - targetCorrespondingSourceObject: {fileID: -3541267358267315357, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 908601551}
+    - targetCorrespondingSourceObject: {fileID: -901246415007118552, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1862706834}
     - targetCorrespondingSourceObject: {fileID: -901246415007118552, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1862706839}
@@ -11964,6 +12823,9 @@ PrefabInstance:
       addedObject: {fileID: 1862706847}
     - targetCorrespondingSourceObject: {fileID: -6085965840632570164, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1498799521}
+    - targetCorrespondingSourceObject: {fileID: -6085965840632570164, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1498799526}
     - targetCorrespondingSourceObject: {fileID: -6085965840632570164, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -11974,6 +12836,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6085965840632570164, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1498799534}
+    - targetCorrespondingSourceObject: {fileID: -8514849019304768289, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 54894977}
     - targetCorrespondingSourceObject: {fileID: -8514849019304768289, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 54894982}
@@ -11988,6 +12853,9 @@ PrefabInstance:
       addedObject: {fileID: 54894990}
     - targetCorrespondingSourceObject: {fileID: -3719026345974798948, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1534455122}
+    - targetCorrespondingSourceObject: {fileID: -3719026345974798948, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1534455127}
     - targetCorrespondingSourceObject: {fileID: -3719026345974798948, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -11998,6 +12866,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -3719026345974798948, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1534455135}
+    - targetCorrespondingSourceObject: {fileID: -1182366323082599020, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1915100064}
     - targetCorrespondingSourceObject: {fileID: -1182366323082599020, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1915100069}
@@ -12012,6 +12883,9 @@ PrefabInstance:
       addedObject: {fileID: 1915100077}
     - targetCorrespondingSourceObject: {fileID: 8119124689580570154, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 612353728}
+    - targetCorrespondingSourceObject: {fileID: 8119124689580570154, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 612353733}
     - targetCorrespondingSourceObject: {fileID: 8119124689580570154, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -12022,6 +12896,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8119124689580570154, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 612353741}
+    - targetCorrespondingSourceObject: {fileID: 2150807243578487370, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1654083584}
     - targetCorrespondingSourceObject: {fileID: 2150807243578487370, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1654083589}
@@ -12036,6 +12913,9 @@ PrefabInstance:
       addedObject: {fileID: 1654083597}
     - targetCorrespondingSourceObject: {fileID: -2892797387761261147, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 2078954010}
+    - targetCorrespondingSourceObject: {fileID: -2892797387761261147, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 2078954015}
     - targetCorrespondingSourceObject: {fileID: -2892797387761261147, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -12046,6 +12926,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2892797387761261147, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2078954023}
+    - targetCorrespondingSourceObject: {fileID: 932009505995833821, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 847023723}
     - targetCorrespondingSourceObject: {fileID: 932009505995833821, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 847023728}
@@ -12060,6 +12943,9 @@ PrefabInstance:
       addedObject: {fileID: 847023736}
     - targetCorrespondingSourceObject: {fileID: 2663752142303553821, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1563648955}
+    - targetCorrespondingSourceObject: {fileID: 2663752142303553821, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1563648960}
     - targetCorrespondingSourceObject: {fileID: 2663752142303553821, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -12070,6 +12956,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2663752142303553821, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1563648968}
+    - targetCorrespondingSourceObject: {fileID: -5851935840457168582, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 26418927}
     - targetCorrespondingSourceObject: {fileID: -5851935840457168582, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 26418932}
@@ -12084,6 +12973,9 @@ PrefabInstance:
       addedObject: {fileID: 26418940}
     - targetCorrespondingSourceObject: {fileID: -2808465238259235856, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1597164973}
+    - targetCorrespondingSourceObject: {fileID: -2808465238259235856, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1597164978}
     - targetCorrespondingSourceObject: {fileID: -2808465238259235856, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -12094,6 +12986,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2808465238259235856, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1597164986}
+    - targetCorrespondingSourceObject: {fileID: -4133607979080420952, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1636943410}
     - targetCorrespondingSourceObject: {fileID: -4133607979080420952, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1636943415}
@@ -12108,6 +13003,9 @@ PrefabInstance:
       addedObject: {fileID: 1636943423}
     - targetCorrespondingSourceObject: {fileID: -8137289912758452444, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1631037817}
+    - targetCorrespondingSourceObject: {fileID: -8137289912758452444, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1631037822}
     - targetCorrespondingSourceObject: {fileID: -8137289912758452444, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -12120,6 +13018,9 @@ PrefabInstance:
       addedObject: {fileID: 1631037830}
     - targetCorrespondingSourceObject: {fileID: 5306094768046066749, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1653055241}
+    - targetCorrespondingSourceObject: {fileID: 5306094768046066749, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1653055246}
     - targetCorrespondingSourceObject: {fileID: 5306094768046066749, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
@@ -12129,7 +13030,10 @@ PrefabInstance:
       addedObject: {fileID: 1653055250}
     - targetCorrespondingSourceObject: {fileID: 5306094768046066749, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1653055258}
+      addedObject: {fileID: 1653055254}
+    - targetCorrespondingSourceObject: {fileID: -5581499553034481480, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1586233909}
     - targetCorrespondingSourceObject: {fileID: -5581499553034481480, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1586233914}
@@ -12142,6 +13046,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5581499553034481480, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1586233922}
+    - targetCorrespondingSourceObject: {fileID: -5127014028821387320, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1603003814}
     - targetCorrespondingSourceObject: {fileID: -5127014028821387320, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1603003818}
@@ -12195,6 +13102,81 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -5545481567895528312, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1782410502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782410497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 2
+  color: 1
+  gridPos: {x: 6, y: 7}
+--- !u!114 &1782410503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782410498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 2
+  color: 1
+  gridPos: {x: 1, y: 7}
+--- !u!114 &1782410504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782410499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 5
+  color: 1
+  gridPos: {x: 4, y: 7}
+--- !u!114 &1782410505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782410500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 3
+  color: 1
+  gridPos: {x: 5, y: 7}
+--- !u!114 &1782410506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782410501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 3
+  color: 1
+  gridPos: {x: 2, y: 7}
 --- !u!64 &1782410513
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12281,7 +13263,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 23.231915, y: 23.23191, z: 44.122116}
   m_Center: {x: 0.000019073486, y: 0.0000047683707, z: 9.212561}
---- !u!114 &1782410521
+--- !u!114 &1782410517
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12363,11 +13345,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918ecc0353c8e8e44bc13c9c9d6e3555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Knight
-  color: 0
-  pieceType: 0
+  color: 1
+  pieceType: 2
   boardPosition: {x: 0, y: 0}
   hasMoved: 0
---- !u!114 &1782410539
+--- !u!114 &1782410532
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12474,6 +13456,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -7565704435971120096, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1838591397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838591395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 1
+  gridPos: {x: 6, y: 6}
 --- !u!64 &1838591401
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12565,6 +13562,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -901246415007118552, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1862706834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862706832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 1
+  color: 1
+  gridPos: {x: 7, y: 7}
 --- !u!64 &1862706838
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12647,8 +13659,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e393dc9d016bc34190c8b62d93edd54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rook
-  color: 0
-  pieceType: 0
+  color: 1
+  pieceType: 1
   boardPosition: {x: 0, y: 0}
   hasMoved: 0
 --- !u!1 &1869271804
@@ -12663,6 +13675,7 @@ GameObject:
   - component: {fileID: 1869271807}
   - component: {fileID: 1869271806}
   - component: {fileID: 1869271805}
+  - component: {fileID: 1869271809}
   - component: {fileID: 1869271810}
   - component: {fileID: 1869271811}
   m_Layer: 0
@@ -12766,6 +13779,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1869271809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869271804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 4, y: 2}
 --- !u!114 &1869271810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12778,14 +13804,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1869271811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12844,6 +13862,7 @@ GameObject:
   - component: {fileID: 1896189645}
   - component: {fileID: 1896189644}
   - component: {fileID: 1896189643}
+  - component: {fileID: 1896189647}
   - component: {fileID: 1896189648}
   - component: {fileID: 1896189649}
   m_Layer: 0
@@ -12947,6 +13966,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1896189647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896189642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 0, y: 0}
 --- !u!114 &1896189648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12959,14 +13991,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1896189649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12986,6 +14010,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -1182366323082599020, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1915100064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915100062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 2
+  color: 0
+  gridPos: {x: 1, y: 0}
 --- !u!64 &1915100068
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13084,6 +14123,7 @@ GameObject:
   - component: {fileID: 1962464448}
   - component: {fileID: 1962464447}
   - component: {fileID: 1962464446}
+  - component: {fileID: 1962464450}
   - component: {fileID: 1962464451}
   - component: {fileID: 1962464452}
   m_Layer: 0
@@ -13187,6 +14227,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1962464450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962464445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 3, y: 5}
 --- !u!114 &1962464451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13199,14 +14252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1962464452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13233,6 +14278,7 @@ GameObject:
   - component: {fileID: 1975546302}
   - component: {fileID: 1975546301}
   - component: {fileID: 1975546300}
+  - component: {fileID: 1975546304}
   - component: {fileID: 1975546305}
   - component: {fileID: 1975546306}
   m_Layer: 0
@@ -13336,6 +14382,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1975546304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975546299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 0, y: 6}
 --- !u!114 &1975546305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13348,14 +14407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &1975546306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13414,6 +14465,7 @@ GameObject:
   - component: {fileID: 2008031434}
   - component: {fileID: 2008031433}
   - component: {fileID: 2008031432}
+  - component: {fileID: 2008031436}
   - component: {fileID: 2008031437}
   - component: {fileID: 2008031438}
   m_Layer: 0
@@ -13517,6 +14569,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2008031436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008031431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 2, y: 5}
 --- !u!114 &2008031437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13529,14 +14594,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &2008031438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13563,6 +14620,7 @@ GameObject:
   - component: {fileID: 2058863391}
   - component: {fileID: 2058863390}
   - component: {fileID: 2058863389}
+  - component: {fileID: 2058863393}
   - component: {fileID: 2058863394}
   - component: {fileID: 2058863395}
   m_Layer: 0
@@ -13666,6 +14724,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2058863393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058863388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 6, y: 0}
 --- !u!114 &2058863394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13678,14 +14749,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &2058863395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13712,6 +14775,7 @@ GameObject:
   - component: {fileID: 2064320389}
   - component: {fileID: 2064320388}
   - component: {fileID: 2064320387}
+  - component: {fileID: 2064320391}
   - component: {fileID: 2064320392}
   - component: {fileID: 2064320393}
   m_Layer: 0
@@ -13815,6 +14879,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2064320391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064320386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 0, y: 5}
 --- !u!114 &2064320392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13827,14 +14904,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &2064320393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13861,6 +14930,7 @@ GameObject:
   - component: {fileID: 2067579922}
   - component: {fileID: 2067579921}
   - component: {fileID: 2067579920}
+  - component: {fileID: 2067579924}
   - component: {fileID: 2067579925}
   - component: {fileID: 2067579926}
   m_Layer: 0
@@ -13964,6 +15034,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2067579924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067579919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 0, y: 3}
 --- !u!114 &2067579925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13976,14 +15059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &2067579926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14062,6 +15137,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -2892797387761261147, guid: b29c5dfd516fc4b45965da48000b40c8, type: 3}
   m_PrefabInstance: {fileID: 1782410493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2078954010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078954008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b677209f39cf474fbf6e5be9ddf8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChessPiece
+  type: 0
+  color: 0
+  gridPos: {x: 1, y: 1}
 --- !u!64 &2078954014
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14181,6 +15271,7 @@ GameObject:
   - component: {fileID: 2141545710}
   - component: {fileID: 2141545709}
   - component: {fileID: 2141545708}
+  - component: {fileID: 2141545712}
   - component: {fileID: 2141545713}
   - component: {fileID: 2141545714}
   m_Layer: 0
@@ -14284,6 +15375,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1554121278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2141545712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141545707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff8ff613b2cd0940a98f71efa899ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gridPos: {x: 1, y: 0}
 --- !u!114 &2141545713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14296,14 +15400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c116e76af7a18ed44a1119d54b83c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardManager
-  whiteQueenPromotionPrefab: {fileID: 0}
-  blackQueenPromotionPrefab: {fileID: 0}
-  whiteRookPromotionPrefab: {fileID: 0}
-  blackRookPromotionPrefab: {fileID: 0}
-  whiteBishopPromotionPrefab: {fileID: 0}
-  blackBishopPromotionPrefab: {fileID: 0}
-  whiteKnightPromotionPrefab: {fileID: 0}
-  blackKnightPromotionPrefab: {fileID: 0}
 --- !u!114 &2141545714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14322,6 +15418,6 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 330585546}
   - {fileID: 832575519}
   - {fileID: 1782410493}
-  - {fileID: 928834332}
